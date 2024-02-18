@@ -15,6 +15,11 @@ const Formulario = ({ registration }) => {
       return;
     }
 
+    if (password.length < 8) {
+      setError("Su contraseña debe tener un mínimo de 8 caracteres");
+      return;
+    }
+
     const isValidEmail = (value) => {
       const email =
         /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -22,7 +27,7 @@ const Formulario = ({ registration }) => {
     };
 
     if (!isValidEmail(mail)) {
-      setError("Ingresa un correo electrónico válido");
+      setError("el mail no es válido");
       return;
     }
 

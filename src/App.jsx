@@ -9,6 +9,9 @@ function App() {
   const Registration = (success) => {
     if (success) {
       setMessage("¡Registro exitoso!");
+      setTimeout(() => {
+        setMessage(null);
+      }, 4000);
     } else {
       setMessage("¡Completar todos los campos!");
     }
