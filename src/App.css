@@ -31,12 +31,22 @@ body {
 }
 
 .icono:hover {
-  background-color: #06f30e; 
+  background-color: #56f3fe; 
 }
 
 .form-group {
   margin-bottom: 20px;
 }
 
+.message-error{
+  color: rgb(206, 32, 32);
+  font-weight: bold;
+  margin-top: 15px;
+}
 
+.alert{
+  color: rgb(7, 239, 7);
+  font-weight: bold;
+  margin-top: 15px;
+}
 

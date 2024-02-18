@@ -20,6 +20,11 @@ const Formulario = ({ registration }) => {
       return;
     }
 
+    if (!/[A-Z]/.test(password)) {
+      setError("La contraseña debe contener al menos una letra mayúscula");
+      return;
+    }
+
     const isValidEmail = (value) => {
       const email =
         /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -27,7 +32,7 @@ const Formulario = ({ registration }) => {
     };
 
     if (!isValidEmail(mail)) {
-      setError("el mail no es válido");
+      setError("Introduzca una dirección de correo electrónico válida");
       return;
     }
 
@@ -49,7 +54,6 @@ const Formulario = ({ registration }) => {
     <div className="form-container">
       <p>o usa tu e-mail para registrarte</p>
       <form className="formulario" onSubmit={validateData}>
-     
         <div className="form-group">
           <input
             type="text"
@@ -93,13 +97,13 @@ const Formulario = ({ registration }) => {
             value={pass}
           />
         </div>
-        
+
         <button className="btn btn-dark mt-3" type="submit">
           Registrarse
         </button>
-        {error && <p>{error}</p>}
+        {error && <p className="message-error">{error}</p>}
       </form>
-      </div>
+    </div>
   );
 };
 

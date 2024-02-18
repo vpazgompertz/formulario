@@ -11,9 +11,9 @@ function App() {
       setMessage("¡Registro exitoso!");
       setTimeout(() => {
         setMessage(null);
-      }, 4000);
+      }, 5000);
     } else {
-      setMessage("¡Completar todos los campos!");
+      setMessage("¡Completa todos los campos!");
     }
   };
 
