@@ -1,0 +1,41 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  color: #000; 
+  width: 320px;
+  margin: 0 auto; 
+  padding: 20px; 
+  border: 1px solid #ccc;
+  border-radius: 20px; 
+  height: auto;
+}
+
+body {
+  background-color: #3542b9; 
+}
+
+.title{
+    font-size: 30px;
+}
+
+.icono {
+  font-size: 20px; 
+  cursor: pointer;
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  border: 2px solid #000000;
+  margin: 0 5px 10px 5px; 
+  background-color: #fff;
+}
+
+.icono:hover {
+  background-color: #06f30e; 
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+
